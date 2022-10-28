@@ -92,8 +92,6 @@ class ControllerTests {
         verify(exactly = 2) {
             employeeRepository.save(Employee("Mary", "Manager"))
         }
-
-
     }
 
     @Test
@@ -111,7 +109,6 @@ class ControllerTests {
         } answers {
             Optional.empty()
         }
-
 
         mvc.get("/employees/1").andExpect {
             status { isOk() }
@@ -134,7 +131,6 @@ class ControllerTests {
         }
 
         // VERIFY
-
     }
 
     @Test
